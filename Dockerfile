@@ -44,11 +44,4 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libc6\
     --with-freetype-dir \
     && docker-php-ext-install gd
 
-# Add user for laravel application
-# RUN groupadd -g 1000 www \
-#     && useradd -u 1000 -ms /bin/bash -g www www
-
-# Change current user to www
-# USER www
-
 EXPOSE 9000
