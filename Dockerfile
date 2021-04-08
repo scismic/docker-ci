@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y libmcrypt-dev zlib1g-dev curl\
     && docker-php-ext-enable redis
 
 # Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.0.12
 
 COPY ./php.ini /usr/local/etc/php/conf.d/local.ini
 
