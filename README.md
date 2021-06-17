@@ -3,7 +3,7 @@
 ### Build docker image
 
 ```
-docker build . -t scismic/docker-ci
+docker build . -t scismic/docker-ci-php8
 ```
 
 
@@ -11,5 +11,5 @@ docker build . -t scismic/docker-ci
 Login to docker in command line
 
 ```
-docker push scismic/docker-ci
+docker push scismic/docker-ci-php8
 ```
