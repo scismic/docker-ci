@@ -45,6 +45,12 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libc6\
         libfreetype6-dev \
         git \
     && docker-php-ext-configure gd \
-    && docker-php-ext-install gd
+        --enable-gd \
+        --with-freetype \
+        --with-jpeg \
+        --with-webp \
+    && docker-php-ext-install gd \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives
 
 EXPOSE 9000
